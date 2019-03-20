@@ -1,6 +1,6 @@
 {
-  "name": "cyb-ant-design",
-  "version": "1.1.0",
+  "name": "jui",
+  "version": "1.0.0",
   "description": "基于塞伯坦和antDesign的最佳工程实践解决方案",
   "scripts": {
     "start": "npm run dev & npm run cybmock ",
