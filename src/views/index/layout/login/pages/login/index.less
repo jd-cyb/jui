@@ -1,0 +1,20 @@
+@import '~antd/lib/style/themes/default.less';
+
+.loginPage {
+    width: 368px;
+    margin: 0 auto;
+    @media screen and (max-width: @screen-sm) {
+        width: 95%;
+    }
+    .loginForm {
+        .loginFormForgot,.loginFormReg {
+            float: right;
+        }
+        .loginFormButton {
+            width: 100%;
+        }
+        .last {
+            margin-bottom: 0;
+        }
+    }
+}
