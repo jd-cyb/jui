@@ -50,4 +50,4 @@ yarn dist
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2018, [塞伯坦前端架构组](https://github.com/jd-cyb)
+Copyright (c) 2018, [塞伯坦技术架构组](https://github.com/jd-cyb)
