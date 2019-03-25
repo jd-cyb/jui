@@ -18,3 +18,4 @@ fez-*
 *.sln
 .log
 yarn.lock
+.cache
