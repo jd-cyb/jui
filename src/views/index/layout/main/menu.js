@@ -38,6 +38,11 @@ const menuData = [
     ]
   },
   {
+    name: '图表',
+    icon: 'line-chart',
+    path: 'charts'
+  },
+  {
     name: '异常页',
     icon: 'warning',
     path: 'exception',

@@ -41,6 +41,7 @@
     "antd": "^3.16.2",
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
+    "echarts": "^4.2.1",
     "enquire-js": "^0.2.1",
     "js-cookie": "^2.2.0",
     "lodash": "^4.17.11",
@@ -57,7 +58,8 @@
     "react-document-title": "^2.0.3",
     "react-dom": "^16.8.6",
     "react-loadable": "^5.5.0",
-    "react-router-dom": "^5.0.0"
+    "react-router-dom": "^5.0.0",
+    "viser-react": "^2.4.5"
   },
   "author": "塞伯坦前端架构组",
   "license": "MIT",
