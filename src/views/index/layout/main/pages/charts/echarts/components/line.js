@@ -2,9 +2,9 @@ import React from 'react'
 import echarts from 'echarts/lib/echarts'
 import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/grid'
-import 'echarts/lib/chart/funnel'
+import 'echarts/lib/chart/line'
 
-export default class FunnelReact extends React.Component {
+export default class LineComponent extends React.Component {
 
   constructor(props) {
     super(props)

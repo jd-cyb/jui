@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import asyncComponents from '@/components/async-components' //异步组件
-
-const Funnel = asyncComponents(() => import('../components/funnel'))
+import ChartComponent from '../components/funnel'
 
 const chartOptions = {
   title: {
@@ -71,12 +69,12 @@ const chartOptions = {
   ]
 }
 
-export default class verticalBar extends Component {
+export default class FunnelPage extends Component {
 
   render() {
     return (
       <Fragment>
-        <Funnel options={chartOptions} height={500}/>
+        <ChartComponent options={chartOptions} height={500}/>
       </Fragment>
     )
   }

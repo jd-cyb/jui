@@ -35,10 +35,10 @@
     "cyb-cli": "1.8.4",
     "cybmock": "^1.4.0",
     "mockjs": "^1.0.1-beta3",
-    "react-hot-loader": "^4.8.3"
+    "react-hot-loader": "^4.8.4"
   },
   "dependencies": {
-    "antd": "^3.16.2",
+    "antd": "^3.16.5",
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "echarts": "^4.2.1",

@@ -4,7 +4,7 @@ import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/grid'
 import 'echarts/lib/chart/pie'
 
-export default class PieReact extends React.Component {
+export default class PieComponent extends React.Component {
 
   constructor(props) {
     super(props)

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Chart, Coord, Legend, Tooltip, Pie } from 'viser-react';
 
-export default class PieRangeReact extends React.Component {
+export default class PieRangeComponent extends React.Component {
 
   constructor(props) {
     super(props)

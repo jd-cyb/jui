@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import asyncComponents from '@/components/async-components' //异步组件
-
-const Bar = asyncComponents(() => import('../components/bar'))
+import ChartComponent from '../components/line'
 
 const chartOptions = {
   xAxis: {
@@ -13,17 +11,17 @@ const chartOptions = {
       type: 'value'
   },
   series: [{
-      data: [120, 200, 150, 80, 70, 110, 130],
-      type: 'bar'
+      data: [820, 932, 901, 934, 1290, 1330, 1320],
+      type: 'line'
   }]
 }
 
-export default class verticalBar extends Component {
+export default class LineSimplePage extends Component {
 
   render() {
     return (
       <Fragment>
-        <Bar options={chartOptions} height={500}/>
+        <ChartComponent options={chartOptions}/>
       </Fragment>
     )
   }

@@ -2,9 +2,9 @@ import React from 'react'
 import echarts from 'echarts/lib/echarts'
 import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/grid'
-import 'echarts/lib/chart/radar'
+import 'echarts/lib/chart/funnel'
 
-export default class RadarReact extends React.Component {
+export default class FunnelComponent extends React.Component {
 
   constructor(props) {
     super(props)

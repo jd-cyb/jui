@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import asyncComponents from '@/components/async-components' //异步组件
-
-const Radar = asyncComponents(() => import('../components/radar'))
+import ChartComponent from '../components/radar'
 
 const chartOptions = {
   title: {
@@ -48,12 +46,12 @@ const chartOptions = {
   }]
 }
 
-export default class verticalBar extends Component {
+export default class RadarPage extends Component {
 
   render() {
     return (
       <Fragment>
-        <Radar options={chartOptions} height={500}/>
+        <ChartComponent options={chartOptions} height={500}/>
       </Fragment>
     )
   }

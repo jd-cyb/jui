@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import asyncComponents from '@/components/async-components' //异步组件
-
-const PieRanged = asyncComponents(() => import('../components/pie-ranged'))
+import ChartComponent from '../components/pie-ranged'
 
 const chartOptions = {
   data : [
@@ -33,12 +31,12 @@ const chartOptions = {
   ]
 }
 
-export default class pieRanged extends Component {
+export default class PieRangedPage extends Component {
 
   render() {
     return (
       <Fragment>
-        <PieRanged options={chartOptions}/>
+        <ChartComponent options={chartOptions}/>
       </Fragment>
     )
   }

@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import asyncComponents from '@/components/async-components' //异步组件
-
-const PieChart = asyncComponents(() => import('../components/pie'))
+import ChartComponent from '../components/pie'
 
 const chartOptions = {
   title : {
@@ -43,12 +41,12 @@ const chartOptions = {
   ]
 }
 
-export default class echartsPieSimple extends Component {
+export default class PieSimplePage extends Component {
 
   render() {
     return (
       <Fragment>
-        <PieChart options={chartOptions}/>
+        <ChartComponent height={500} options={chartOptions}/>
       </Fragment>
     )
   }

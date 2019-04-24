@@ -2,9 +2,9 @@ import React from 'react'
 import echarts from 'echarts/lib/echarts'
 import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/grid'
-import 'echarts/lib/chart/line'
+import 'echarts/lib/chart/radar'
 
-export default class LineReact extends React.Component {
+export default class RadarComponent extends React.Component {
 
   constructor(props) {
     super(props)

@@ -4,7 +4,7 @@ import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/grid'
 import 'echarts/lib/chart/bar'
 
-export default class BarReact extends React.Component {
+export default class BarComponent extends React.Component {
 
   constructor(props) {
     super(props)

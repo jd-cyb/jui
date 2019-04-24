@@ -40,7 +40,17 @@ const menuData = [
   {
     name: '图表',
     icon: 'line-chart',
-    path: 'charts'
+    path: 'charts',
+    children: [
+      {
+        name: 'Echarts',
+        path: 'echarts'
+      },
+      {
+        name: 'Viser',
+        path: 'viser'
+      }
+    ]
   },
   {
     name: '异常页',

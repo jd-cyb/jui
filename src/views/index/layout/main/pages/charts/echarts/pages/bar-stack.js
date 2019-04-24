@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import asyncComponents from '@/components/async-components' //异步组件
-
-const Bar = asyncComponents(() => import('../components/bar'))
+import ChartComponent from '../components/bar'
 
 const chartOptions = {
   tooltip : {
@@ -98,12 +96,12 @@ const chartOptions = {
   ]
 }
 
-export default class barStack extends Component {
+export default class BarStackPage extends Component {
 
   render() {
     return (
       <Fragment>
-        <Bar options={chartOptions}/>
+        <ChartComponent options={chartOptions}/>
       </Fragment>
     )
   }
