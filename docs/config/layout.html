@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>界面布局 | JUI</title>
+    <meta name="description" content="现代响应式的中后台最佳实践解决方案">
+    <link rel="shortcut icon" href="/jui/docs/favicon.ico">
+    
+    <link rel="preload" href="/jui/docs/assets/css/0.styles.e85cac57.css" as="style"><link rel="preload" href="/jui/docs/assets/js/app.859bd09c.js" as="script"><link rel="preload" href="/jui/docs/assets/js/9.3873562a.js" as="script"><link rel="prefetch" href="/jui/docs/assets/js/10.daf58f6d.js"><link rel="prefetch" href="/jui/docs/assets/js/11.5c83a276.js"><link rel="prefetch" href="/jui/docs/assets/js/12.517d1943.js"><link rel="prefetch" href="/jui/docs/assets/js/13.f5e5943d.js"><link rel="prefetch" href="/jui/docs/assets/js/14.03a7fa9d.js"><link rel="prefetch" href="/jui/docs/assets/js/15.4c0c2bfd.js"><link rel="prefetch" href="/jui/docs/assets/js/16.1e930897.js"><link rel="prefetch" href="/jui/docs/assets/js/17.442eaddd.js"><link rel="prefetch" href="/jui/docs/assets/js/18.798a95bf.js"><link rel="prefetch" href="/jui/docs/assets/js/19.410f92dc.js"><link rel="prefetch" href="/jui/docs/assets/js/2.d431caf3.js"><link rel="prefetch" href="/jui/docs/assets/js/20.0d585c5e.js"><link rel="prefetch" href="/jui/docs/assets/js/21.0cd4bcbe.js"><link rel="prefetch" href="/jui/docs/assets/js/22.4f93e1cd.js"><link rel="prefetch" href="/jui/docs/assets/js/3.b84a2bc8.js"><link rel="prefetch" href="/jui/docs/assets/js/4.b1960ad8.js"><link rel="prefetch" href="/jui/docs/assets/js/5.042178c9.js"><link rel="prefetch" href="/jui/docs/assets/js/6.cb9286a6.js"><link rel="prefetch" href="/jui/docs/assets/js/7.b0acb99f.js"><link rel="prefetch" href="/jui/docs/assets/js/8.8b5da87e.js">
+    <link rel="stylesheet" href="/jui/docs/assets/css/0.styles.e85cac57.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/jui/docs/" class="home-link router-link-active"><!----> <span class="site-name">JUI</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/jui/docs/guide/" class="nav-link">安装使用</a></div><div class="nav-item"><a href="/jui/docs/config/" class="nav-link router-link-active">开发配置</a></div><div class="nav-item"><a href="/jui/docs/extend/" class="nav-link">物料组件</a></div><div class="nav-item"><a href="https://jd-cyb.github.io/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官方网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/jd-cyb/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/jui/docs/guide/" class="nav-link">安装使用</a></div><div class="nav-item"><a href="/jui/docs/config/" class="nav-link router-link-active">开发配置</a></div><div class="nav-item"><a href="/jui/docs/extend/" class="nav-link">物料组件</a></div><div class="nav-item"><a href="https://jd-cyb.github.io/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官方网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/jd-cyb/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/jui/docs/config/" class="sidebar-link">JUI</a></li><li><a href="/jui/docs/config/directory.html" class="sidebar-link">目录结构</a></li><li><a href="/jui/docs/config/component.html" class="sidebar-link">组件化最佳实践</a></li><li><a href="/jui/docs/config/layout.html" class="active sidebar-link">界面布局</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/jui/docs/config/layout.html#布局目录结构" class="sidebar-link">布局目录结构</a></li><li class="sidebar-sub-header"><a href="/jui/docs/config/layout.html#登录-注册布局" class="sidebar-link">登录/注册布局</a></li><li class="sidebar-sub-header"><a href="/jui/docs/config/layout.html#产品主界面布局" class="sidebar-link">产品主界面布局</a></li><li class="sidebar-sub-header"><a href="/jui/docs/config/layout.html#异常页布局" class="sidebar-link">异常页布局</a></li><li class="sidebar-sub-header"><a href="/jui/docs/config/layout.html#扩展更多布局" class="sidebar-link">扩展更多布局</a></li></ul></li><li><a href="/jui/docs/config/main-layout.html" class="sidebar-link">主界面布局</a></li><li><a href="/jui/docs/config/main-menu.html" class="sidebar-link">主界面菜单</a></li><li><a href="/jui/docs/config/theme.html" class="sidebar-link">定制界面主题</a></li><li><a href="/jui/docs/config/routes.html" class="sidebar-link">路由配置最佳实践</a></li><li><a href="/jui/docs/config/store.html" class="sidebar-link">状态管理最佳实践</a></li><li><a href="/jui/docs/config/api.html" class="sidebar-link">服务端交互最佳实践</a></li><li><a href="/jui/docs/config/mock.html" class="sidebar-link">MOCK联调最佳实践</a></li><li><a href="/jui/docs/config/build.html" class="sidebar-link">工程构建和发布</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="界面布局"><a href="#界面布局" aria-hidden="true" class="header-anchor">#</a> 界面布局</h1> <p>布局是视觉界面最外层的框架结构，JUI以视觉界面已集成三种基本布局</p> <ul><li>用于登录/注册的<code>login</code>布局</li> <li>产品主界面<code>main</code>布局</li> <li>系统异常页<code>exception</code>布局，</li></ul> <p>并存放在<code>layout</code>目录中，以组件化独立分治的原则与布局相关的所有资源及逻辑代码，包括路由、状态数据流等资源，均存放在与其对应的目录中管理，使用者也可以根据项目情况扩展其它布局。</p> <h2 id="布局目录结构"><a href="#布局目录结构" aria-hidden="true" class="header-anchor">#</a> 布局目录结构</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>layout
+├── login <span class="token comment">#登录注册布局</span>
+│   ├── assets
+│   ├── components
+│   ├── index.js
+│   ├── index.less
+│   ├── pages
+│   └── routes.js
+└── main <span class="token comment">#主界面布局</span>
+│   ├── components <span class="token comment"># 有关main布局的公共组件</span>
+│   ├── config.js 
+│   ├── index.js <span class="token comment">#main布局入口脚本</span>
+│   ├── index.less <span class="token comment">#main布局的整体样式</span>
+│   ├── menu.js
+│   ├── pages <span class="token comment">#main布局的路由页面</span>
+│   └── routes.js <span class="token comment">#main布局的路由配置</span>
+└── exception <span class="token comment">#页面错误处理布局</span>
+    ├── components
+    ├── index.js
+    ├── pages
+    └── routes.js
+</code></pre></div><h2 id="登录-注册布局"><a href="#登录-注册布局" aria-hidden="true" class="header-anchor">#</a> 登录/注册布局</h2> <p>用于登录/注册/注册更成功的通用布局。</p> <p><img src="/docs/layout/login.png" alt="登录注册布局"></p> <h2 id="产品主界面布局"><a href="#产品主界面布局" aria-hidden="true" class="header-anchor">#</a> 产品主界面布局</h2> <p>包括顶部导航、侧边栏内容导航、页脚的产品主界面布局。</p> <p><img src="/docs/layout/main.png" alt="产品主界面布局"></p> <h2 id="异常页布局"><a href="#异常页布局" aria-hidden="true" class="header-anchor">#</a> 异常页布局</h2> <p>异常页用于对页面特定的异常状态进行反馈。通常，它包含对错误状态的阐述，并向用户提供建议或操作，避免用户感到迷失和困惑。</p> <p><img src="/docs/layout/page404.png" alt="异常页布局"></p> <h2 id="扩展更多布局"><a href="#扩展更多布局" aria-hidden="true" class="header-anchor">#</a> 扩展更多布局</h2> <p>用户可自行在<code>views/index/routes.js</code>文件中配置扩展更多框架结构的布局。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//views/index/routes.js</span>
+
+<span class="token keyword">import</span> Loadable <span class="token keyword">from</span> <span class="token string">'@/components/loadable'</span> <span class="token comment">//懒加载组件</span>
+
+<span class="token keyword">const</span> mainLayout <span class="token operator">=</span> <span class="token function">Loadable</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/layout/main'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//产品主界面布局</span>
+<span class="token keyword">const</span> loginLayout <span class="token operator">=</span> <span class="token function">Loadable</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/layout/login'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//登录/注册布局</span>
+<span class="token keyword">const</span> exceptionLayout <span class="token operator">=</span> <span class="token function">Loadable</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/layout/exception'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//异常页布局</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'/user'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> loginLayout <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'/exception'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> exceptionLayout <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> mainLayout <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><blockquote><p>请保持根路由<code>/</code>在最后配置。</p></blockquote></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/jui/docs/config/component.html" class="prev">
+          组件化最佳实践
+        </a></span> <span class="next"><a href="/jui/docs/config/main-layout.html">
+          主界面布局
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/jui/docs/assets/js/app.859bd09c.js" defer></script><script src="/jui/docs/assets/js/9.3873562a.js" defer></script>
+  </body>
+</html>

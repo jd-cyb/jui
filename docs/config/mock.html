@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MOCK联调最佳实践 | JUI</title>
+    <meta name="description" content="现代响应式的中后台最佳实践解决方案">
+    <link rel="shortcut icon" href="/jui/docs/favicon.ico">
+    
+    <link rel="preload" href="/jui/docs/assets/css/0.styles.e85cac57.css" as="style"><link rel="preload" href="/jui/docs/assets/js/app.859bd09c.js" as="script"><link rel="preload" href="/jui/docs/assets/js/12.517d1943.js" as="script"><link rel="prefetch" href="/jui/docs/assets/js/10.daf58f6d.js"><link rel="prefetch" href="/jui/docs/assets/js/11.5c83a276.js"><link rel="prefetch" href="/jui/docs/assets/js/13.f5e5943d.js"><link rel="prefetch" href="/jui/docs/assets/js/14.03a7fa9d.js"><link rel="prefetch" href="/jui/docs/assets/js/15.4c0c2bfd.js"><link rel="prefetch" href="/jui/docs/assets/js/16.1e930897.js"><link rel="prefetch" href="/jui/docs/assets/js/17.442eaddd.js"><link rel="prefetch" href="/jui/docs/assets/js/18.798a95bf.js"><link rel="prefetch" href="/jui/docs/assets/js/19.410f92dc.js"><link rel="prefetch" href="/jui/docs/assets/js/2.d431caf3.js"><link rel="prefetch" href="/jui/docs/assets/js/20.0d585c5e.js"><link rel="prefetch" href="/jui/docs/assets/js/21.0cd4bcbe.js"><link rel="prefetch" href="/jui/docs/assets/js/22.4f93e1cd.js"><link rel="prefetch" href="/jui/docs/assets/js/3.b84a2bc8.js"><link rel="prefetch" href="/jui/docs/assets/js/4.b1960ad8.js"><link rel="prefetch" href="/jui/docs/assets/js/5.042178c9.js"><link rel="prefetch" href="/jui/docs/assets/js/6.cb9286a6.js"><link rel="prefetch" href="/jui/docs/assets/js/7.b0acb99f.js"><link rel="prefetch" href="/jui/docs/assets/js/8.8b5da87e.js"><link rel="prefetch" href="/jui/docs/assets/js/9.3873562a.js">
+    <link rel="stylesheet" href="/jui/docs/assets/css/0.styles.e85cac57.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/jui/docs/" class="home-link router-link-active"><!----> <span class="site-name">JUI</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/jui/docs/guide/" class="nav-link">安装使用</a></div><div class="nav-item"><a href="/jui/docs/config/" class="nav-link router-link-active">开发配置</a></div><div class="nav-item"><a href="/jui/docs/extend/" class="nav-link">物料组件</a></div><div class="nav-item"><a href="https://jd-cyb.github.io/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官方网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/jd-cyb/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/jui/docs/guide/" class="nav-link">安装使用</a></div><div class="nav-item"><a href="/jui/docs/config/" class="nav-link router-link-active">开发配置</a></div><div class="nav-item"><a href="/jui/docs/extend/" class="nav-link">物料组件</a></div><div class="nav-item"><a href="https://jd-cyb.github.io/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官方网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/jd-cyb/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/jui/docs/config/" class="sidebar-link">JUI</a></li><li><a href="/jui/docs/config/directory.html" class="sidebar-link">目录结构</a></li><li><a href="/jui/docs/config/component.html" class="sidebar-link">组件化最佳实践</a></li><li><a href="/jui/docs/config/layout.html" class="sidebar-link">界面布局</a></li><li><a href="/jui/docs/config/main-layout.html" class="sidebar-link">主界面布局</a></li><li><a href="/jui/docs/config/main-menu.html" class="sidebar-link">主界面菜单</a></li><li><a href="/jui/docs/config/theme.html" class="sidebar-link">定制界面主题</a></li><li><a href="/jui/docs/config/routes.html" class="sidebar-link">路由配置最佳实践</a></li><li><a href="/jui/docs/config/store.html" class="sidebar-link">状态管理最佳实践</a></li><li><a href="/jui/docs/config/api.html" class="sidebar-link">服务端交互最佳实践</a></li><li><a href="/jui/docs/config/mock.html" class="active sidebar-link">MOCK联调最佳实践</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/jui/docs/config/mock.html#mock服务基本结构" class="sidebar-link">MOCK服务基本结构</a></li><li class="sidebar-sub-header"><a href="/jui/docs/config/mock.html#mock接口配置" class="sidebar-link">MOCK接口配置</a></li><li class="sidebar-sub-header"><a href="/jui/docs/config/mock.html#mock数据格式" class="sidebar-link">MOCK数据格式</a></li></ul></li><li><a href="/jui/docs/config/build.html" class="sidebar-link">工程构建和发布</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="mock联调最佳实践"><a href="#mock联调最佳实践" aria-hidden="true" class="header-anchor">#</a> MOCK联调最佳实践</h1> <p>Mock 数据是前端开发过程中必不可少的一环，是分离前后端开发的关键链路。通过预先跟服务器端约定好的接口，模拟请求数据甚至逻辑，能够让前端开发独立自主，不会被服务端的开发所阻塞。</p> <p>JUI默认集成了<a href="https://github.com/jd-cyb/cybmock" target="_blank" rel="noopener noreferrer">塞伯坦前端数据模拟服务器（cybmock）<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，CYBMOCK提供前端开发专业的MOCK服务，支持修改MOCK数据的热更新，模拟数据支持对象、数组、函数，或者与<code>mockjs</code>结合，模拟任何随机数据，默认支持跨域请求。更多说明和使用请参考其文档。</p> <h2 id="mock服务基本结构"><a href="#mock服务基本结构" aria-hidden="true" class="header-anchor">#</a> MOCK服务基本结构</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>project
+├── cybmock.config.js <span class="token comment">#mock接口配置</span>
+└── mock <span class="token comment">#mock数据存放目录</span>
+</code></pre></div><h2 id="mock接口配置"><a href="#mock接口配置" aria-hidden="true" class="header-anchor">#</a> MOCK接口配置</h2> <p>在<code>cybmock.config.js</code>集中管理MOCK接口，便于调用、配置和维护。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// project/cybmock.config.js</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> demoMock <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./mock/demo-mock'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token string">'GET /api/demo-mock'</span><span class="token punctuation">:</span> demoMock
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="mock数据格式"><a href="#mock数据格式" aria-hidden="true" class="header-anchor">#</a> MOCK数据格式</h2> <p>支持使用ES Module组织和编写MOCK数据，简化复杂项目MOCK数据的开发和维护工作。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// mock/demo-mock.js</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">demoMock</span> <span class="token operator">=</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    errno<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    msg<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    data<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  demoMock
+<span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/jui/docs/config/api.html" class="prev">
+          服务端交互最佳实践
+        </a></span> <span class="next"><a href="/jui/docs/config/build.html">
+          工程构建和发布
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/jui/docs/assets/js/app.859bd09c.js" defer></script><script src="/jui/docs/assets/js/12.517d1943.js" defer></script>
+  </body>
+</html>

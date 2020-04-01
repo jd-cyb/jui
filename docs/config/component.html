@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>组件化最佳实践 | JUI</title>
+    <meta name="description" content="现代响应式的中后台最佳实践解决方案">
+    <link rel="shortcut icon" href="/jui/docs/favicon.ico">
+    
+    <link rel="preload" href="/jui/docs/assets/css/0.styles.e85cac57.css" as="style"><link rel="preload" href="/jui/docs/assets/js/app.859bd09c.js" as="script"><link rel="preload" href="/jui/docs/assets/js/7.b0acb99f.js" as="script"><link rel="prefetch" href="/jui/docs/assets/js/10.daf58f6d.js"><link rel="prefetch" href="/jui/docs/assets/js/11.5c83a276.js"><link rel="prefetch" href="/jui/docs/assets/js/12.517d1943.js"><link rel="prefetch" href="/jui/docs/assets/js/13.f5e5943d.js"><link rel="prefetch" href="/jui/docs/assets/js/14.03a7fa9d.js"><link rel="prefetch" href="/jui/docs/assets/js/15.4c0c2bfd.js"><link rel="prefetch" href="/jui/docs/assets/js/16.1e930897.js"><link rel="prefetch" href="/jui/docs/assets/js/17.442eaddd.js"><link rel="prefetch" href="/jui/docs/assets/js/18.798a95bf.js"><link rel="prefetch" href="/jui/docs/assets/js/19.410f92dc.js"><link rel="prefetch" href="/jui/docs/assets/js/2.d431caf3.js"><link rel="prefetch" href="/jui/docs/assets/js/20.0d585c5e.js"><link rel="prefetch" href="/jui/docs/assets/js/21.0cd4bcbe.js"><link rel="prefetch" href="/jui/docs/assets/js/22.4f93e1cd.js"><link rel="prefetch" href="/jui/docs/assets/js/3.b84a2bc8.js"><link rel="prefetch" href="/jui/docs/assets/js/4.b1960ad8.js"><link rel="prefetch" href="/jui/docs/assets/js/5.042178c9.js"><link rel="prefetch" href="/jui/docs/assets/js/6.cb9286a6.js"><link rel="prefetch" href="/jui/docs/assets/js/8.8b5da87e.js"><link rel="prefetch" href="/jui/docs/assets/js/9.3873562a.js">
+    <link rel="stylesheet" href="/jui/docs/assets/css/0.styles.e85cac57.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/jui/docs/" class="home-link router-link-active"><!----> <span class="site-name">JUI</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/jui/docs/guide/" class="nav-link">安装使用</a></div><div class="nav-item"><a href="/jui/docs/config/" class="nav-link router-link-active">开发配置</a></div><div class="nav-item"><a href="/jui/docs/extend/" class="nav-link">物料组件</a></div><div class="nav-item"><a href="https://jd-cyb.github.io/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官方网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/jd-cyb/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/jui/docs/guide/" class="nav-link">安装使用</a></div><div class="nav-item"><a href="/jui/docs/config/" class="nav-link router-link-active">开发配置</a></div><div class="nav-item"><a href="/jui/docs/extend/" class="nav-link">物料组件</a></div><div class="nav-item"><a href="https://jd-cyb.github.io/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官方网站
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/jd-cyb/jui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/jui/docs/config/" class="sidebar-link">JUI</a></li><li><a href="/jui/docs/config/directory.html" class="sidebar-link">目录结构</a></li><li><a href="/jui/docs/config/component.html" class="active sidebar-link">组件化最佳实践</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/jui/docs/config/component.html#页面组件" class="sidebar-link">页面组件</a></li><li class="sidebar-sub-header"><a href="/jui/docs/config/component.html#功能组件" class="sidebar-link">功能组件</a></li><li class="sidebar-sub-header"><a href="/jui/docs/config/component.html#组件结构概览" class="sidebar-link">组件结构概览</a></li></ul></li><li><a href="/jui/docs/config/layout.html" class="sidebar-link">界面布局</a></li><li><a href="/jui/docs/config/main-layout.html" class="sidebar-link">主界面布局</a></li><li><a href="/jui/docs/config/main-menu.html" class="sidebar-link">主界面菜单</a></li><li><a href="/jui/docs/config/theme.html" class="sidebar-link">定制界面主题</a></li><li><a href="/jui/docs/config/routes.html" class="sidebar-link">路由配置最佳实践</a></li><li><a href="/jui/docs/config/store.html" class="sidebar-link">状态管理最佳实践</a></li><li><a href="/jui/docs/config/api.html" class="sidebar-link">服务端交互最佳实践</a></li><li><a href="/jui/docs/config/mock.html" class="sidebar-link">MOCK联调最佳实践</a></li><li><a href="/jui/docs/config/build.html" class="sidebar-link">工程构建和发布</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="组件化最佳实践"><a href="#组件化最佳实践" aria-hidden="true" class="header-anchor">#</a> 组件化最佳实践</h1> <p>JUI核心是单文件组件的架构模式，以组件化分而治之的指导原则部署代码，可以将整个应用理解为一个大的组件，布局是其子组件，功能页面是布局组件的子组件，功能模块又是功能页面的子组件，依次类推，整个应用将有许多个独立的不同规模、不同功能的独立分治的模块/组件组成。</p> <p>组件根据功能不同分为页面组件和功能组件。</p> <h2 id="页面组件"><a href="#页面组件" aria-hidden="true" class="header-anchor">#</a> 页面组件</h2> <p>页面组件指配置了路由，配合路由实现界面的跳转，或者通过链接直接访问的模块，页面组件可以由若干子页面组件、或者相对独立功能的组件完成一个视图页面中的大功能。在JUI中，页面组件通常部署在<code>pages</code>目录中。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>pages/页面组件
+├── index.js 
+├── index.less <span class="token comment">#可以有 样式</span>
+├── assets <span class="token comment">#可以有 图片、字体等静态资产</span>
+├── components <span class="token comment">#可以有 相对独立功能的子组件</span>
+├── pages <span class="token comment">#可以有 若干 子页面组件</span>
+├── routes.js <span class="token comment">#可以有 子页面组件的路由配置</span>
+└── store.js <span class="token comment">#可以有 子页面组件间共享状态的store配置</span>
+</code></pre></div><h2 id="功能组件"><a href="#功能组件" aria-hidden="true" class="header-anchor">#</a> 功能组件</h2> <p>功能组件只负责一块相对独立、稳定的功能，没有路由配置，可能是纯静态的，也可能包含自己的 state，但不涉及多个组件间共享的数据流，仅受父组件（通常是一个页面组件）传递的参数控制。在JUI中，功能组件通常部署在<code>components</code>目录中。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>components/功能组件
+├── index.js 
+├── index.less <span class="token comment">#可以有 样式</span>
+├── assets <span class="token comment">#可以有 图片、字体等静态资产</span>
+└── components <span class="token comment">#可以有 相对独立功能的子组件</span>
+</code></pre></div><h2 id="组件结构概览"><a href="#组件结构概览" aria-hidden="true" class="header-anchor">#</a> 组件结构概览</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>index <span class="token comment">#页面组件</span>
+├── api
+├── app.js
+├── assets
+├── components
+├── index.html
+├── index.js
+├── index.less
+├── layout
+│   ├── exception
+│   │   ├── components <span class="token comment">#功能组件</span>
+│   │   ├── index.js
+│   │   ├── pages <span class="token comment">#页面组件</span>
+│   │   │   ├── 403.js
+│   │   │   ├── 404.js
+│   │   │   └── 500.js
+│   │   └── routes.js
+│   ├── login
+│   │   ├── assets
+│   │   ├── components <span class="token comment">#功能组件</span>
+│   │   ├── index.js
+│   │   ├── index.less
+│   │   ├── pages <span class="token comment">#页面组件</span>
+│   │   │   ├── login
+│   │   │   │   ├── index.js
+│   │   │   │   └── index.less
+│   │   │   ├── register
+│   │   │   │   ├── index.js
+│   │   │   │   └── index.less
+│   │   │   └── register-result
+│   │   │       ├── index.js
+│   │   │       ├── index.less
+│   │   │       ├── result.js
+│   │   │       └── result.less
+│   │   └── routes.js
+│   └── main
+│       ├── components
+│       │   ├── footer
+│       │   ├── header
+│       │   ├── page-wrapper
+│       │   └── sider-menu
+│       ├── config.js
+│       ├── index.js
+│       ├── index.less
+│       ├── menu.js
+│       ├── pages <span class="token comment">#页面组件</span>
+│       │   ├── basic-form
+│       │   │   ├── index.js
+│       │   │   └── index.less
+│       │   ├── basic-table
+│       │   │   ├── components <span class="token comment">#功能组件</span>
+│       │   │   ├── index.js
+│       │   │   └── service.js
+│       │   ├── dashboard
+│       │   │   └── index.js
+│       │   ├── search-table
+│       │   │   ├── components <span class="token comment">#功能组件</span>
+│       │   │   └── index.js
+│       │   └── step-form
+│       │       ├── components <span class="token comment">#功能组件</span>
+│       │       ├── index.js
+│       │       ├── index.less
+│       │       ├── pages <span class="token comment">#页面组件</span>
+│       │       │   ├── step1.js
+│       │       │   ├── step2.js
+│       │       │   ├── step3.js
+│       │       │   └── style.less
+│       │       ├── routes.js
+│       │       └── store.js
+│       └── routes.js
+├── routes.js
+├── store.js
+└── utils
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/jui/docs/config/directory.html" class="prev">
+          目录结构
+        </a></span> <span class="next"><a href="/jui/docs/config/layout.html">
+          界面布局
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/jui/docs/assets/js/app.859bd09c.js" defer></script><script src="/jui/docs/assets/js/7.b0acb99f.js" defer></script>
+  </body>
+</html>
