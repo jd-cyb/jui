@@ -21,7 +21,21 @@ export default class App extends React.Component {
     e.preventDefault()
     this.props.form.validateFields(async (err, values) => {
       if (err) return
-      const res = await login(values)
+      // const res = await login(values)
+      const userInfo = {
+        "id": "155",
+        "avatar": 'https://s.gravatar.com/avatar/e29e4fea91ed22e85a326aec93a01781?size=496&default=retro',
+        "name": "admin",
+        "nickName": "赵Sir"
+      }
+      const res = {
+        errno: 0,
+        msg: '',
+        data: {
+          "userInfo": userInfo,
+          "clientToken": userInfo.id + new Date()*1
+        }
+      }
       if (res.errno !== 0) {
         this.setState({ loginErrno: res.errno, loginMsg: res.msg })
         return

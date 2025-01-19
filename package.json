@@ -12,7 +12,8 @@
     "zip": "cyb zip",
     "sftp": "cyb sftp",
     "fontmin": "cyb fontmin",
-    "imagemin": "cyb imagemin"
+    "imagemin": "cyb imagemin",
+    "gh-pages": "gh-pages -d dist --repo git@github.com:jd-cyb/jui-demo.git"
   },
   "keywords": [
     "CYB",
@@ -43,6 +44,7 @@
     "classnames": "^2.2.6",
     "echarts": "^4.2.1",
     "enquire-js": "^0.2.1",
+    "gh-pages": "^6.2.0",
     "js-cookie": "^2.2.0",
     "lodash": "^4.17.11",
     "lodash-decorators": "^6.0.1",

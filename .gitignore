@@ -1,5 +1,4 @@
 .DS_Store
-package-lock.json
 node_modules
 bower_components
 npm-debug.log*
@@ -17,5 +16,4 @@ fez-*
 *.njsproj
 *.sln
 .log
-yarn.lock
 .cache
